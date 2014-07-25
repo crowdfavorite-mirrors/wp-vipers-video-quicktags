@@ -1,9 +1,8 @@
 === Viper's Video Quicktags ===
 Contributors: Viper007Bond
-Donate link: http://www.viper007bond.com/donate/
 Tags: video, quicktags, wysiwyg, tinymce, youtube, google video, dailymotion, vimeo, veoh, viddler, metacafe, blip.tv, flickr, ifilm, myspace, flv, quicktime
 Requires at least: 2.8
-Tested up to: 3.4
+Tested up to: 3.9
 Stable tag: trunk
 
 Allows easy and XHTML valid posting of videos from various websites such as YouTube, DailyMotion, Vimeo, and more.
@@ -87,10 +86,6 @@ Yes, it does. Included in the `localization` folder is the translation template 
 
 This is a free plugin and as such, you aren't guaranteed support. However I do my best to answer support questions. Just post on the [WordPress.org support forums](http://wordpress.org/tags/vipers-video-quicktags).
 
-= I love your plugin! Can I donate to you? =
-
-Sure! I do this in my free time and I appreciate all donations that I get. It makes me want to continue to update this plugin. You can find more details on [my donate page](http://www.viper007bond.com/donate/).
-
 == Screenshots ==
 
 1. TinyMCE, the plugin's buttons, and the plugin's dialog window.
@@ -98,6 +93,43 @@ Sure! I do this in my free time and I appreciate all donations that I get. It ma
 2. DailyMotion configuration page with Farbtastic color picker showing.
 
 == Changelog ==
+
+= v6.5.2 =
+
+* **Editor:** Don't try to load the jQuery Dialog images that were removed in v6.5.0 in favor of WordPress core's styling.
+
+= v6.5.1 =
+
+* **Editor:** Actually hide buttons in TinyMCE that have been disabled rather than showing all of them.
+* **General:** Code improvements around having the plugin in a different location.
+
+= v6.5.0 =
+
+* **General:** WordPress 3.9 compatibility.
+* **Editor:** Switch to native dialog box styling and drop the variable height functionality. It was too complicated to be worth it.
+* **General:** Remove the donate button. I meant to remove this years ago but kept forgetting. I'm lucky enough to work for Automattic and no longer need to the rare donation that this button brings.
+
+= v6.4.5 =
+
+* **Security:** Better sanitization and validation of shortcode attributes to prevent low-access users from doing naughty things. Props Jacek. PS: This plugin badly needs a rewrite from scratch.
+* **General:** Only output SWFObject JavaScript if it's actually needed.
+
+= v6.4.4 =
+
+* **General:** Updates to support new version of jQuery UI that is included in WordPress 3.5. Fixes dialog box not opening.
+
+= v6.4.3 =
+
+* **Quicktime:** Control the background color via a new parameter (`bgcolor`) per request.
+* **Quicktime:** Rewrite of the Quicktime parameter functionality. Also a new filter for other plugins to be able to control these parameters.
+
+= July 23rd, 2012 (no version bump) ==
+
+* **Localization:** Updated Italian translation thanks to Gianni Diurno.
+
+= v6.4.2 =
+
+* **General:** Support SSL (`https://`) video URLs. Props [Tyrel Kelsey](http://ninnypants.com/) for the bug report.
 
 = v6.4.1 =
 
@@ -513,11 +545,5 @@ This is a hotfix version to address WordPress 2.5 plus some bugfixes and such. A
 
 == Upgrade Notice ==
 
-= 6.3.4 =
-DailyMotion bug fix.
-
-= 6.3.3 =
-Various minor editor improvements thanks to Andrew Ozz (azaozz).
-
-= 6.3.2 =
-YouTube playlists fixed and better WordPress 3.3 support.
+= 6.4.5 =
+**Security:** Better sanitization and validation of shortcode attributes to prevent low-access users from doing naughty things. Props Jacek.
